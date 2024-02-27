@@ -14,16 +14,14 @@ html,body{
 }
 
 /*--- Header Part Starts Her ---*/
-.header{    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+.header{    
+	background-position: center center;
 	background:url(banner.jpg)no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-ms-background-size:cover;
 	-o-background-size:cover;
-	min-height:400px;
 	position:relative;
 }
 .header-profile{
