@@ -23,6 +23,9 @@ html,body{
 	-o-background-size:cover;
 	min-height:400px;
 	position:relative;
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .header-profile{
 	position:absolute;
