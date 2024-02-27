@@ -14,14 +14,14 @@ html,body{
 }
 
 /*--- Header Part Starts Her ---*/
-.header{    
-	background-position: center center;
+.header{
 	background:url(banner.jpg)no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-ms-background-size:cover;
 	-o-background-size:cover;
+	min-height:400px;
 	position:relative;
 }
 .header-profile{
@@ -1222,4 +1222,3 @@ p.copyright a:hover{
 .header-profile img {
     height: 238px;
 }
-
