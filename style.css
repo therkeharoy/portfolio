@@ -14,7 +14,9 @@ html,body{
 }
 
 /*--- Header Part Starts Her ---*/
-.header{
+.header{    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 	background:url(banner.jpg)no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
