@@ -1219,3 +1219,7 @@ p.copyright a:hover{
 	}
 }
 /*--- Media Queries Ends Here ---*/
+.header-profile img {
+    height: 238px;
+}
+
