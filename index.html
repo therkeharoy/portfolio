@@ -63,7 +63,9 @@ Let's work together to boost your online presence and achieve your digital marke
 							<li><i class="travel"></i></li>
 							<li><i class="tea"></i></li>
 						</ul>
-						<a href="https://therkeharoy.github.io/rekhaCV/" class="download"><span></span>Download Resume</a>
+						<!-- <a href="" class="download"><span></span>Download Resume</a> -->
+						<a href="#" onclick="downloadPDF()" class="download"><span>Download Resume</span></a>
+
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -101,7 +103,7 @@ Let's work together to boost your online presence and achieve your digital marke
 			</div>
 			<div class="exp-devide education">
 				<h4>Education</h4>
-				<span class="devide-line">
+				<span class="devide-line" style="height:275px;">
 				</span>
 				<label class="book"></label>
 				<div class="exp-devide-grid-right">
@@ -114,11 +116,11 @@ Let's work together to boost your online presence and achieve your digital marke
 					<small>Modern Sciences & Arts University - 2012 . 2010</small>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 				</div>
-				<div class="exp-devide-grid-rightb">
+				<!-- <div class="exp-devide-grid-rightb">
 					<h5>GRADUATION</h5>
 					<small>Modern Sciences & Arts University - Faculty of Computer Science - 2006 . 2010</small>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -165,6 +167,19 @@ Let's work together to boost your online presence and achieve your digital marke
 			<!--- Skill Script --->
 				<script type="text/javascript" src="circles.js"></script>
 						         <script>
+
+
+												 function downloadPDF() {
+												  var pdfUrl = 'https://github.com/therkeharoy/portfolio/raw/main/Course%201%20Glossary.pdf';
+
+											  var link = document.createElement('a');
+											  link.href = pdfUrl;
+											  link.download = 'Course 1 Glossary.pdf'; // Name of the downloaded file
+											  document.body.appendChild(link);
+											  link.click();
+											  document.body.removeChild(link);
+											 }
+
 									var colors = [
 											['#fff', '#2980b9'], ['#fff', '#2980b9'], ['#fff', '#2980b9'], ['#fff', '#2980b9']
 										];
@@ -326,23 +341,50 @@ Let's work together to boost your online presence and achieve your digital marke
 					</div>
 					<div class="clearfix"></div>
 				</div>
-				<form action="https://formspree.io/f/xeqykzeq" method="POST">
-	    <div class="contact-form">
-	        <div class="text">
-	            <input type="text" name="name" placeholder="Your Name.." required>
-	        </div>
-	        <div class="text">
-	            <input type="email" name="email" placeholder="Your Email.." required>
-	        </div>
-	        <div class="text">
-	            <textarea name="message" placeholder="Message:" required></textarea>
-	        </div>
-	        <div class="text">
-	            <input type="submit" value="Submit">
-	        </div>
-	    </div>
-	</form>
+				<form id="contactForm" action="https://formspree.io/f/xeqykzeq" method="POST">
+			    <div class="contact-form">
+			        <div class="text">
+			            <input type="text" name="name" placeholder="Your Name.." required>
+			        </div>
+			        <div class="text">
+			            <input type="email" name="email" placeholder="Your Email.." required>
+			        </div>
+			        <div class="text">
+			            <textarea name="message" placeholder="Message:" required></textarea>
+			        </div>
+			        <div class="text">
+			            <input type="submit" value="Submit">
+			        </div>
+			    </div>
+			</form>
 
+			<script>
+			document.getElementById("contactForm").addEventListener("submit", function(event) {
+			    event.preventDefault(); // Prevent default form submission
+
+			    // Get form data
+			    var formData = new FormData(this);
+
+			    // Send form data asynchronously using AJAX
+			    var xhr = new XMLHttpRequest();
+			    xhr.open("POST", "https://formspree.io/f/xeqykzeq", true);
+			    xhr.setRequestHeader("Accept", "application/json");
+			    xhr.onreadystatechange = function () {
+			        if (xhr.readyState === 4) {
+			            if (xhr.status === 200 || xhr.status === 201) {
+			                // Handle successful submission here
+			                alert("Message sent successfully!");
+			                // You can redirect the user to a thank you page if needed
+			                // window.location.href = "thankyou.html";
+			            } else {
+			                // Handle error if submission fails
+			                alert("Error: Message not sent. Please try again later.");
+			            }
+			        }
+			    };
+			    xhr.send(formData);
+			});
+			</script>
 			</div>
 		</div>
 	</div>
@@ -354,5 +396,6 @@ Let's work together to boost your online presence and achieve your digital marke
 		</div>
 	</div>
 	<!--- Footer Ends Here ---->
+
 </body>
 </html>
