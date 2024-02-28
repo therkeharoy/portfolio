@@ -175,7 +175,7 @@ a.download span{
 	background:url(dold.png)no-repeat;
 	width:32px;
 	height:32px;
-	display:inline-block;
+	display:contents;
 	vertical-align:middle;
 	margin-right:0.5em;
 
@@ -417,6 +417,7 @@ ul.social li i.gp{
 /*--- Award Part Ends Here ----*/
 /*---- Twitter Feed Part Starts Here ----*/
 .twitter{
+	display: none;
 	background:#f1f2f7;
 	padding:2em 0;
 }
@@ -643,6 +644,7 @@ i.twit{
 /*--- contact Part Starts Here ----*/
 .contact{
 	margin:2em 0 0;
+	background: #f1f2f7;
 }
 .contact-top{
 	padding:2em 0;
